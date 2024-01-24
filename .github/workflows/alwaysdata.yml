@@ -1,4 +1,4 @@
-name: Industrialisation continue sur le serveur Alwaysdata
+name: Industrialisation continue sur le serveur Alwaysdata 2
 on: push
 jobs:
   deploy:
