@@ -38,6 +38,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
            apt-get install sshpass
-           ssh-keyscan -H ${{ secrets.USERNAMEDIST }}.alwaysdata.net >> ~/.ssh/known_hosts
+           ssh-keyscan -H ${{ secrets.USERNAME }}.alwaysdata.net >> ~/.ssh/known_hosts
            cd $HOME/www/
            sshpass -p ${{ secrets.PASSWORDDIST }} scp sauvegarde.sql stockerboris_1@ssh-etudiant.alwaysdata.net:./www/
