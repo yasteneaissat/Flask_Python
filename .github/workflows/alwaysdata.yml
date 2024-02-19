@@ -33,11 +33,11 @@ jobs:
       - name: Connexion SSH avec le serveur
         uses: appleboy/ssh-action@master
         with:
-          host: "ssh-${{ secrets.USERNAMED }}.alwaysdata.net"
+          host: "ssh-${{ secrets.USERNAME }}.alwaysdata.net"
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
            apt-get install sshpass
-           ssh-keyscan -H ${{ secrets.USERNAME }}.alwaysdata.net >> ~/.ssh/known_hosts
+           ssh-keyscan -H ssh-adammulti.alwaysdata.net >> ~/.ssh/known_hosts
            cd $HOME/www/
-           sshpass -p ${{ secrets.PASSWORDDIST }} scp sauvegarde.sql stockerboris_2@ssh-${{ secrets.USERNAME }}.alwaysdata.net:./www/
+           sshpass -p "Leiter!!" scp sauvegarde.sql adammulti@ssh-adammulti.alwaysdata.net:./www/
