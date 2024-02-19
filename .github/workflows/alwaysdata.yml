@@ -13,7 +13,7 @@ jobs:
           script: |
             cd $HOME/www/
   
-SauvegardeBDD:
+  SauvegardeBDD:
     needs: Connexion
     runs-on: ubuntu-latest
     steps:
@@ -25,9 +25,8 @@ SauvegardeBDD:
           password: ${{ secrets.PASSWORD }}
           script: |
             cd $HOME/www/
-	          sqlite3 database.db .dump > sauvegarde.sql
-
-CopyDistant:
+            sqlite3 database.db .dump > sauvegarde.sql
+  CopyBDD:
     needs: SauvegardeBDD
     runs-on: ubuntu-latest
     steps:
@@ -38,7 +37,7 @@ CopyDistant:
           username: ${{ secrets.USERNAMEDIST }}
           password: ${{ secrets.PASSWORDDIST }}
           script: |
-	          apt-get install sshpass
-	          ssh-keyscan -H ${{ secrets.USERNAMEDIST }}.alwaysdata.net >> ~/.ssh/known_hosts
-	          cd $HOME/www/
-	          sshpass -p ${{ secrets.PASSWORDDIST }} scp sauvegarde.sql ${{ secrets.USERNAMEDIST }}@ssh-${{ secrets.USERNAMEDIST }}.alwaysdata.net:./www/
+           apt-get install sshpass
+           ssh-keyscan -H ${{ secrets.USERNAMEDIST }}.alwaysdata.net >> ~/.ssh/known_hosts
+           cd $HOME/www/
+           sshpass -p ${{ secrets.PASSWORDDIST }} scp sauvegarde.sql ${{ secrets.USERNAMEDIST }}@ssh-${{ secrets.USERNAMEDIST }}.alwaysdata.net:./www/
