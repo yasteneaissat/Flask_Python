@@ -37,7 +37,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
-           apt-get install sshpass
-           ssh-keyscan -H ssh-adammulti.alwaysdata.net >> ~/.ssh/known_hosts
-           cd $HOME/www/
-           sshpass -p "Leiter!!" scp sauvegarde.sql adammulti@ssh-adammulti.alwaysdata.net:./www/
+            cd $HOME/www/
+            sqlite3 database.db .dump > sauvegarde.sql
+            scp -i ${{ secrets.KEYSSH }} sauvegarde.sql adammulti@ssh-adammulti.alwaysdata.net:~/www/
