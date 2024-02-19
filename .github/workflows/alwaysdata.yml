@@ -13,4 +13,4 @@ jobs:
           script: |
             cd $HOME/www/
             apt-get install sshpass
-            sshpass --h
+            sshpass -h
