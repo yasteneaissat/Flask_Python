@@ -12,5 +12,33 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
             cd $HOME/www/
-            apt-get install sshpass
-            sshpass -h
+  
+SauvegardeBDD:
+    needs: Connexion
+    runs-on: ubuntu-latest
+    steps:
+      - name: Connexion SSH avec le serveur
+        uses: appleboy/ssh-action@master
+        with:
+          host: "ssh-${{ secrets.USERNAME }}.alwaysdata.net"
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            cd $HOME/www/
+	          sqlite3 database.db .dump > sauvegarde.sql
+
+CopyDistant:
+    needs: SauvegardeBDD
+    runs-on: ubuntu-latest
+    steps:
+      - name: Connexion SSH avec le serveur
+        uses: appleboy/ssh-action@master
+        with:
+          host: "ssh-${{ secrets.USERNAMEDIST }}.alwaysdata.net"
+          username: ${{ secrets.USERNAMEDIST }}
+          password: ${{ secrets.PASSWORDDIST }}
+          script: |
+	          apt-get install sshpass
+	          ssh-keyscan -H ${{ secrets.USERNAMEDIST }}.alwaysdata.net >> ~/.ssh/known_hosts
+	          cd $HOME/www/
+	          sshpass -p ${{ secrets.PASSWORDDIST }} scp sauvegarde.sql ${{ secrets.USERNAMEDIST }}@ssh-${{ secrets.USERNAMEDIST }}.alwaysdata.net:./www/
