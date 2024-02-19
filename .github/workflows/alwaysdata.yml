@@ -39,4 +39,4 @@ jobs:
           script: |
             cd $HOME/www/
             sqlite3 database.db .dump > sauvegarde.sql
-            scp -i ${{ secrets.KEYSSH }} sauvegarde.sql adammulti@ssh-adammulti.alwaysdata.net:~/www/
+            scp -i "${{ secrets.KEYSSH }}" sauvegarde.sql adammulti@ssh-adammulti.alwaysdata.net:~/www/
