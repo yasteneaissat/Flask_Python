@@ -33,9 +33,9 @@ jobs:
       - name: Connexion SSH avec le serveur
         uses: appleboy/ssh-action@master
         with:
-          host: "ssh-${{ secrets.USERNAMEDIST }}.alwaysdata.net"
-          username: ${{ secrets.USERNAMEDIST }}
-          password: ${{ secrets.PASSWORDDIST }}
+          host: "ssh-${{ secrets.USERNAMED }}.alwaysdata.net"
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
           script: |
            apt-get install sshpass
            ssh-keyscan -H ${{ secrets.USERNAMEDIST }}.alwaysdata.net >> ~/.ssh/known_hosts
