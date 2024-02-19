@@ -1,20 +1,16 @@
-name: Industrialisation continue sur le serveur Alwaysdata 2
+name: Sauvegarde Base de données
 on: push
 jobs:
-  deploy:
+  Connexion:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy Flask app
+      - name: Connexion SSH avec le serveur
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST_DNS }}
+          host: "ssh-${{ secrets.USERNAME }}.alwaysdata.net"
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          port: 22
-          key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd $HOME/www/
-            git clone https://github.com/OpenRSI/flask_hello_world_2.git
-            rsync -r ./flask_hello_world_2/ ./flask
-            rm -rf ./flask_hello_world_2
-            curl -X POST --basic --user "${{ secrets.ALWAYSDATA_TOKEN }}:" https://api.alwaysdata.com/v1/site/${{ secrets.ALWAYSDATA_SITE_ID }}/restart/
+            apt-get install sshpass
+            sshpass --h
