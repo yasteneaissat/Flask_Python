@@ -26,5 +26,19 @@ Remarque importante : Ce code est à ajouter après la ligne "app = Flask(__name
 </p>
 <p>Notion acquises lors de cet exercice : Vous avez appris lors de cet exercice à créer des API (c'est à dire des routes) dans une application Python. Vous pouvez créer autant d'API (de routes) que vous le souhaitez dans votre application Python.</p>
 <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+<h3>Exercice 3 : Création d'un fichier contact.html</h3>
+<p>Objectif : Savoir créer et placer ses fichiers HTML (&CSS)</p>
+L'exercice consiste à créer un fichier contact.html toujours accèssible depuis la route "/contact/" de votre site et qui n'affichera plus "Ma page de contact" mais une page html beaucoup plus élaborée.
+2 étapes sont nécéssaires pour réaliser cet exercice. Etape 1 : Créer et déposer votre fichier contact.html dans le répertoire **templates**. Etape 2 : Modifier votre route /contact/ comme suit :
+<pre><code><xmp>
+@app.route("/contact/")
+def MaPremiereAPI():
+    return render_template("contact.html")
+</xmp></code></pre>
+Remarque importante : Si vous souhaitez utiliser du CSS, les fichiers CSS sont à déposer dans le répertoire /static/css/ .
+<b>Attention l'indentation est très importante en Python.</b>
+</p>
+<p>Notion acquises lors de cet exercice : Les Framework imposent un cadre de travail. Ici, le Framwork Flask vous impose de déposer vos fichiers html dans le répertoire "templates".</p>
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 </body>
 </html>
