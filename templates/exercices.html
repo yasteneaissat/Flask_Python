@@ -41,20 +41,20 @@ Remarque importante : Si vous souhaitez utiliser du CSS dans votre fichier.html,
 <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 <h3>Exercice 4 : Création d'une fonction de calcul</h3>
 <p>Objectif : Savoir créer des fonctions de calcul en Python</p>
-L'exercice consiste à créer une focntion qui calculera le carré d'une valeur saisi par l'internaute. Cette fonctionn sera accéssible depuis la route "/calcul_carre/" de votre site et nécéssitera de saisir une valeur. Exemple : <b>https://{Votre_URL}/calcul_carre/2</b>.
+L'exercice consiste à créer une fonction qui calculera le carré d'une valeur saisi par l'internaute. Cette fonction sera accessible depuis la route "/calcul_carre/" de votre site et nécessitera de saisir une valeur. Exemple : <b>https://{Votre_URL}/calcul_carre/2</b>.
 Voici la route à créer dans votre application Python (__init__.py) :
 <pre><code><xmp>
 @app.route('/calcul_carre/<int:val_user>')
 def carre(val_user):
     return "<h2>Le carré de votre valeur est : </h2>" + str(val_user * val_user)
 </xmp></code></pre>
-Travail demandé : Sachant que la constructon d'une pour 2 valeurs est la suivante :
+Travail demandé : Sachant que la construction d'une route pour 2 valeurs est la suivante :
 <pre><code><xmp>    
 /somme/<int:valeur1>/<int:valeur2>
 </xmp></code></pre>
 Ecrivez la fonction permettant de faire la somme de 2 valeurs saisie par l'internaute.   
 </p>
-<p>Notion acquises lors de cet exercice : Vous avez apris à créer vos fonctions Python</p>
+<p>Notion acquises lors de cet exercice : Vous avez appris à créer vos fonctions Python</p>
 <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>    
 </body>
 </html>
