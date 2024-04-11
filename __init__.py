@@ -7,11 +7,11 @@ app = Flask(__name__)
                                                                                                                                        
 @app.route('/')
 def hello_world():
-    return render_template('hello.html')
+    return "<h2>Bonjour tout le monde !</h2><p>Pour accéder à vos exerices cliquez <a href='./exercices'>Ici</a></p>"
 
-@app.route('/fr/')
-def hello_world_fr():
-    return "<h2>Bonjour tout le monde !</h2>"
-                                                                                                                                       
+@app.route('/exerices')
+def exercices():
+    return render_template('exercices.html')
+                                                                                                               
 if __name__ == "__main__":
   app.run(debug=True)
