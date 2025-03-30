@@ -6,14 +6,8 @@ from flask import json
 app = Flask(__name__)                                                                                                                  
                                                                                                                                        
 @app.route('/<int:valeur>')
-def exercice():
-    return valeur
-
-
-
-
-
-
+def exercice(valeur):
+    return str(valeur)
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)
