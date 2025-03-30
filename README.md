@@ -93,8 +93,7 @@ Séquence 4 : Exercices Python
 Objectif : Apprendre à créer vos API et applications Python  
 Difficulté : Moyenne
 ---------------------------------------------------
-Votre solution est à présent en ligne sur votre site Web. Rendez-vous sur la page d'accueil de votre site suivi d'un chiffre, exemple :  
-https://{URL_DE_VOTRE_SITE}/5  
+Votre solution est à présent en ligne sur votre site Web. Rendez-vous sur la page d'accueil de votre site suivi d'un chiffre, exemple : **https://{URL_DE_VOTRE_SITE}/5**  
 
 --------------------------------------------------------------------
 Troubleshooting :
