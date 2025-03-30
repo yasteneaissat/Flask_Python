@@ -11,6 +11,7 @@ def index():
     if not user_value:
         return "N'oubliez pas saisir un chiffre dans votre URL"
     return f"Valeur saisie : {user_value}"
+  
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)
