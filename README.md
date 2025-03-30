@@ -24,7 +24,7 @@ Remarque importante : **Lors de votre inscription, utilisez une adresse mail val
 2° - Faites un Fork du Repository suivant : [https://github.com/OpenRSI/Flask_Hello_World.git](https://github.com/OpenRSI/Flask_Hello_World.git)  
 Voici une vidéo d'accompagnement pour vous aider dans les "Forks" : [Forker ce projet](https://youtu.be/p33-7XQ29zQ)    
   
-**Travail demandé :** Créé votre compte GitHUB, faites le fork de ce projet et **copier l'URL de votre Repository GitHUB dans la discussion public**.
+**Travail demandé :** Créé votre compte GitHUB, faites le fork de ce projet et **copier l'URL de votre Repository GitHUB dans la discussion Gérénale de Discord**.
 
 Notion acquise lors de cette séquence :  
 Vous avez appris lors de cette séquence à créer des Repository pour stocker et travailler avec votre code informatique. Vous pourez par la suite travailler en groupe sur un projet. Vous avez également appris à faire des Forks. C'est à dire, faire des copies de projets déjà existant dans GitHUB que vous pourrez ensuite adapter à vos besoins.
@@ -79,17 +79,22 @@ Pour ce projet Métriques, **vous avez 4 secrets à créer** dans votre Reposito
   
 Voici une vidéo pour vous expliquer le processus de création de vos secrets dans GitHUB : [Création des secrets](https://youtu.be/pi80zRdrJyQ) 
 
+**Dernière étape :** Pour engager l'automatisation de votre première Action, vous devez cliquer sur le gros boutton vert dans l'onglet supérieur Actions. Le boutton s'intitule "I understand my workflows, go ahead and enable them"  
+  
+![Screenshot Actions](Actions_Button.jpg)   
+
 Notions acquises de cette séquence :  
 Vous avez vu dans cette séquence comment créer des secrets GiHUB afin de mettre en place de l'industrialisation continue.  
 L'utilité des scripts d'actions (C'est à dire des scripts exécutés lors des Commits) est très importante mais sortes malheureusement du cadre de cet atelier faute de temps. Toutefois, je vous invites à découvrir cet outil via les différentes sources du Web (Google, ChatGPT, etc..).  
 
 ---------------------------------------------------
-Séquence 4 : Exercices
+Séquence 4 : Exercices Python
 ---------------------------------------------------
 Objectif : Apprendre à créer vos API et applications Python  
 Difficulté : Moyenne
 ---------------------------------------------------
-Votre solution est à présent en ligne. Rendez-vous sur la page d'accueil de votre site et suivez les instructions pour réaliser les exercices qui vous sont demandés. Bon courage et bon travail à tous.  
+Votre solution est à présent en ligne sur votre site Web. Rendez-vous sur la page d'accueil de votre site suivi d'un chiffre, exemple :  
+https://{URL_DE_VOTRE_SITE}/5  
 
 --------------------------------------------------------------------
 Troubleshooting :
