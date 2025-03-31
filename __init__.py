@@ -14,8 +14,6 @@ def exercice(valeur):
 
 if __name__ == "__main__":
   app.run(debug=True)
-Copier/Coller ce code dans votre fichier __init__.py
-```PYTHON
 from flask import Flask
 from flask import render_template
 from flask import json                                                                                                                                     
