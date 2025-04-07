@@ -12,6 +12,6 @@ def exercice(valeur):
         etoiles += espaces + '*' * (1 * j - 1) + '\n'
     etoiles += '</pre>'
     return etoiles
-
+ 
 if __name__ == "__main__":
     app.run(debug=True)
