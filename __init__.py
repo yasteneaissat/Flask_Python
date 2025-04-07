@@ -1,13 +1,23 @@
-from flask import Flask
+def somme_conditionnelle(n):
+    somme = 0
+    for i in range(1, n + 1):
+        # Si le nombre est divisible par 5 ou 7
+        if i % 5 == 0 or i % 7 == 0:
+            # Si le nombre est divisible par 11, on passe au nombre suivant
+            if i % 11 == 0:
+                continue
+            # Ajouter le nombre à la somme
+            somme += i
+        
+        # Si la somme dépasse 5000, on arrête immédiatement la boucle
+        if somme > 5000:
+            break
+    
+    return somme
 
-app = Flask(__name__)
+# Demander à l'utilisateur de saisir un nombre
+n = int(input("Entrez la valeur de n : "))
 
-@app.route('/<int:n>')
-def fibonacci(n):
-    fib = [0, 1]
-    for _ in range(2, n):
-        fib.append(fib[-1] + fib[-2])  # Ajouter le terme suivant de la suite de Fibonacci
-    return f"<h1>Suite de Fibonacci jusqu'au {n}-ième terme :</h1><p>{', '.join(map(str, fib[:n]))}</p>"
-
-if __name__ == "__main__":
-    app.run(debug=True)
+# Calculer et afficher la somme
+resultat = somme_conditionnelle(n)
+print(f"La somme finale est : {resultat}")
